@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no" />
+  <title>Gemsloot CPU UI & Juice Library - Phaser 3</title>
+  
+  <style>
+    @font-face {
+      font-family: 'Bungee';
+      src: url('/assets/fonts/Bungee-Regular.ttf') format('truetype');
+      font-weight: normal;
+      font-style: normal;
+      font-display: block;
+    }
+
+    * {
+      box-sizing: border-box;
+      margin: 0;
+      padding: 0;
+      user-select: none;
+      -webkit-user-select: none;
+    }
+
+    html, body {
+      width: 100%;
+      height: 100%;
+      overflow: hidden;
+      background-color: #0f0f1b;
+      font-family: 'Bungee', sans-serif;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+    }
+
+    #game-container {
+      width: 100%;
+      height: 100%;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+    }
+
+    canvas {
+      display: block;
+      box-shadow: 0 10px 40px rgba(0, 0, 0, 0.8);
+    }
+
+    /* Invisible element to trigger immediate browser font load */
+    .font-preload {
+      position: absolute;
+      left: -9999px;
+      top: -9999px;
+      font-family: 'Bungee';
+      font-size: 16px;
+      opacity: 0;
+      pointer-events: none;
+    }
+  </style>
+</head>
+<body>
+  <div class="font-preload">JUICE UI KIT PRELOAD</div>
+  <div id="game-container"></div>
+  <script type="module" src="/src/main.js"></script>
+</body>
+</html>
