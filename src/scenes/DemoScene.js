@@ -136,7 +136,7 @@ export class DemoScene extends Phaser.Scene {
       theme: 'surface',
       fontSize: '10px',
       onClick: (btn) => {
-        const isEnabled = this.juice.screenFX.toggleCRT();
+        const isEnabled = this.juice && this.juice.screenFX ? this.juice.screenFX.toggleCRT() : false;
         btn.setText(isEnabled ? 'CRT SHADER: ON' : 'CRT SHADER: OFF');
         this.juice.toast('Shader Mode', `CRT Post-Processing ${isEnabled ? 'Enabled' : 'Disabled'}`, isEnabled ? 'info' : 'warning');
       }
